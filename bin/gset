@@ -1,15 +1,15 @@
 #!/usr/bin/env ruby
 
 help = <<EOS
-GS(1)
+GSET(1)
 
 NAME
-      gs -- Gemset management
+      gset -- Gemset management
 
 SYNOPSIS
-      gs init
-      gs help
-      gs [command]
+      gset init
+      gset help
+      gset [command]
 
 DESCRIPTION
       When called with no arguments, it starts a shell session and
@@ -24,7 +24,7 @@ DESCRIPTION
           Displays this message.
 
       [command]
-          An optional command that will be executed under gs shell
+          An optional command that will be executed under gset shell
           session and return to the caller session once finished.
 EOS
 
@@ -46,7 +46,7 @@ else
       exec env, ENV["SHELL"]
     end
   else
-    puts "Directory .gs not found. Try `gs help`."
+    puts "Directory .gs not found. Try `gset help`."
     exit 1
   end
 end
